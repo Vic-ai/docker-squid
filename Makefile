@@ -1,4 +1,7 @@
-all: build
-
 build:
-	@docker build --tag=sameersbn/squid .
+	docker build -t vicai/squid .
+
+push:
+	docker push vicai/squid
+
+.PHONY: build push
